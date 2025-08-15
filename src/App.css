@@ -1,0 +1,46 @@
+/* App.css - Minimal custom styles using Tailwind */
+
+.app-container {
+  @apply flex flex-col min-h-screen;
+}
+
+.content {
+  @apply flex-1;
+}
+
+/* Custom animations that aren't in Tailwind */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeOutDown {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+}
+
+/* Page transition classes */
+.page-transition-enter {
+  animation: fadeInUp 300ms ease-out;
+}
+
+.page-transition-exit {
+  animation: fadeOutDown 300ms ease-out;
+}
